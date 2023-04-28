@@ -13,8 +13,6 @@
     box-sizing: border-box;
 }
 
-
-
 body, html {
     background-color: #5f2c82;
     height: 100vh;
@@ -31,7 +29,6 @@ section#login {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden;
 
     background-color: white;
@@ -40,6 +37,7 @@ section#login {
     border-radius: 20px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.705);
     
+    transform: translate(-50%, -50%);
     transition: width .2s, height .2s;
     transition-timing-function: ease;
 }
@@ -49,7 +47,7 @@ section#login > div#imagem {
     background: #5f2c82 url(../imagens/home.jpg);
     background-size: cover;
     background-position: center center;
-    height: 250px;
+    height: 230px;
 }
 
 section#login > div#formulario {
@@ -63,7 +61,44 @@ div#formulario > h1 {
 }
 
 div#formulario > p {
-    font-size: 0.9em;
+    font-size: 1em;
+    padding-bottom: 10px;
+}
+
+form > div.campo {
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    margin: 5px 0px;
+}
+
+div.campo > label {
+    display: none;
+}
+
+div.campo > i {
+    color: white;
+    /*background-color: black;*/
+    font-size: .5em;
+    width: 40px;
+    padding: 4px;
+}
+
+div.campo > input {
+    background-color: #94cfcd;
+    font-size: 1em;
+    width: calc(100% - 44px);
+    height: 100%;
+    border: 0px;
+    border-radius: 5px;
+    padding: 4px;
+    transform: translateY(-10px);
+}
+
+div.campo > input:focus-within {
+    background-color: white;
+    border: none;
 }
 
 form > input[type=submit] {
